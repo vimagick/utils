@@ -29,7 +29,7 @@ for line in args.source:
         args.target.write(line+'\n')
         ok += 1
     except Exception as ex:
-        logging.warn('cannot decode: %s', line, ex)
+        logging.warn('cannot decode: %s (%s)', line, ex)
         err += 1
 
 logging.info(u'success: %d, failed: %d', ok, err)
